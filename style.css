@@ -1,0 +1,111 @@
+* {
+  transition: 250ms; /* make everything animated! */
+}
+@keyframes slide-down-gently {
+  from {
+    opacity: 0;
+    transform: translateY(-15%);
+  } to {
+    opacity: 1;
+    transform: none;
+  }
+}
+html, body {
+  background: #1e1e1e;
+  color: whitesmoke;
+
+  display: flex; /* god mode layout */
+  flex-direction: column; /* stack everything vertically */
+
+  align-items: center;
+  /* now we also wanna center everything vertically */
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  font-family: "Inter";
+}
+body * { /*everything inside the page will animate */
+  animation: slide-down-gently 1s ease-out forwards; /* one animation */
+}
+
+a {
+  text-decoration: none; /* make links look good */
+  color: lightblue;
+}
+a:hover {
+  border-bottom: solid lightblue 2px;
+}
+
+nav {
+  display: grid; /* now let's do all the cool layout stuff */
+  gap: 8px;
+}
+nav a { /* links inside <nav> */
+  display: block; /* make them look like buttons */
+  background-color: black;
+  color: white;
+  padding: 10px; /* this adds space around the text */
+  padding-left: 28px;
+  padding-right: 28px; /* more space sideways */
+  text-align: center;
+  border-radius: 8px; /* make them rounded */
+}
+nav a:hover { /* when navigation links are hovered */
+  border-bottom: none;
+  background-color: lightblue;
+  color: black;
+  box-shadow: 0px 0px 8px lightblue; /* pretty cool huh :D */
+}
+
+/* footer */
+footer {
+  background: linear-gradient(transparent, black); /* cool gradient */
+  width: 100%;
+  padding: 18px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  nav {
+    /* spreads them out on desktop */
+    grid-template-columns: 50% 50%;
+  }
+
+  /* when tall enough, have this cool footer */
+  @media only screen and (min-height: 600px) {
+    footer {
+      position: fixed;
+      bottom: 0;
+    }
+  }
+}
+
+/* social icons */
+a:before {
+  vertical-align: middle; /* so it's aligned */
+}
+#twitter:before {
+  content: url("https://img.icons8.com/fluent/16/twitter.png") " ";
+}
+#telegram:before {
+  content: url("https://img.icons8.com/fluent/16/telegram-app.png") " ";
+}
+#github:before {
+  content: url("https://img.icons8.com/fluent/16/github.png") " ";
+}
+#twitch:before {
+  content: url("https://img.icons8.com/fluent/16/twitch.png") " ";
+}
+#spotify:before {
+  content: url("https://img.icons8.com/fluent/16/spotify.png") " ";
+}
+#discord:before {
+  content: url("https://img.icons8.com/fluent/16/discord.png") " ";
+}
+#youtube:before {
+  content: url("https://img.icons8.com/fluent/16/youtube.png") " ";
+}
+#tiktok:before {
+  content: url("https://img.icons8.com/fluent/16/tiktok.png") " ";
+}
