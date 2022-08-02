@@ -95,6 +95,9 @@ a:before {
 #telegram:before {
   content: url("https://img.icons8.com/fluent/16/telegram-app.png") " ";
 }
+#osu:before {
+  content: url("https://img.icons8.com/fluent/16/osu.png") " ";
+}
 #github:before {
   content: url("https://img.icons8.com/fluent/16/github.png") " ";
 }
